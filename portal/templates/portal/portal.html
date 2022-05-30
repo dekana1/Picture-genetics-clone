@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div id="heading">
+        <div>
+            <h1 class="heading-h1">{{time_greeting}}, {{request.user.first_name}}</h1>
+            <p>Here you can view orders needing attention, any consults, and order history.</p>
+        </div>
+
+        <div id="tour-button-box">
+            <button id="tour-btn">Take a Tour</button>
+        </div>
+    </div>
+    <div id="card_section" >
+
+        <div id="card-section-tabs">
+            <div id="purchases-tab" class="tab active-tab" onclick="openCard('purchase-tab-details')"> Your Purchases </div>
+            <div id="gift-tab" class="tab" onclick="openCard('gift-tab-details')"> Gifts Purchased </div>
+        </div>
+        <div style="display: flex;">
+            <div id="purchase-cards">
+
+            <div id="purchase-tab-details" class="tab-card">
+                {% if latest_purchases %}
+                <ul>
+                    {% for purchase in latest_purchases %}
+                        <li>{{ purchase.test_info }}<a href="{% url 'portal:tests' %}">{{ purchase.test_status }}</a> </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p>Looks like you haven't made any purchases. To explore what Picture has to offer, visit our <a href="{% url 'picturegenetics:shop' %}">products page</a>.</p>
+                {% endif %}
+            </div>
+            <div id="gift-tab-details" class="tab-card" style="display:none">
+                {% if latest_purchases %}
+                    <ul>
+                        {% for purchase in latest_purchases %}
+                            <li>{{ purchase.test_info }}<a href="{% url 'portal:tests' %}">{{ purchase.test_status }}</a> </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Looks like you haven't purchased any gift codes yet. </p>
+                    <p>To give the gift of Picture, add your selected product to your cart from <a href="{% url 'picturegenetics:shop' %}">our shop page</a>. Start the checkout process as normal.
+                        On the "test" page, you'll have the option to say "this is a gift for someone else."
+                        Selecting the option will give you a gift code instead of the physical product! Happy gifting.
+                    </p>
+                    <p>
+                        <em>Please note</em> that some Picture products are <em>not</em> eligible for gift code purchases,
+                        including COVID-19 tests. Thank you for your understanding.
+
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+            <div id="notice-cards">
+            <div id="important-notice" class="cards">
+                <p>
+                    <b>IMPORTANT:</b> Each kit code is <em>unique</em> to each order and is associated to a specific individual.
+                    Please ensure that the correct kit is used for each individual. Inaccuracies can result in our inability to process an order.
+                </p>
+            </div>
+            <div class="cards">
+                <p class="right-float">
+                    <b>Received a gift code?</b>
+                    <span class="card-link"><a href="#">Redeem here</a></span>
+                </p>
+
+            </div>
+            <div class="cards">
+                <p class="notice-header right-float">
+                    <b>Consults</b>
+                    <span class="card-link"><a href="{% url 'portal:consults' %}">Go to My Consults</a></span>
+                </p>
+                <div class="notice-header-content">
+                    <p >
+                        You have not scheduled consults at this time.
+                    </p>
+                </div>
+
+            </div>
+            <div class="cards">
+                <p class="notice-header right-float">
+                    <b>Order History</b>
+                    <span class="card-link"><a href="{% url 'portal:history' %}">Go to Order History</a></span>
+                </p>
+                <div class="notice-header-content">
+                    <p >
+                        You have no previous orders.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+    </div>
+
+
+<script>
+       var tabContainer = document.getElementById("card-section-tabs");
+      // Get all buttons with class="btn" inside the container
+      var tabs = tabContainer.getElementsByClassName("tab");
+      for (var j = 0; j < tabs.length; j++) {
+        tabs[j].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active-tab");
+            current[0].className = current[0].className.replace(" active-tab", "");
+            this.className += " active-tab";
+         });
+      }
+    function openCard(cardName) {
+      var i;
+      var x = document.getElementsByClassName("tab-card");
+
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(cardName).style.display = "block";
+
+    }
+
+</script>
+{% endblock %}

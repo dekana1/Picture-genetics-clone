@@ -1,0 +1,348 @@
+body{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+h2{
+    font-size: 36px;
+}
+nav{
+    padding: 0 130px;
+    margin: 10px 0;
+    /* z-index: 1; */
+}
+#nav-bar-container{
+    z-index: 3;
+    background-color: white;
+    margin-top: 40px;
+}
+#top-ad-strip{
+    top: 0;
+    position: absolute;
+    height: min-content;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(39, 56, 122);
+    color: white;
+    z-index: 2;
+}
+
+#navbar{
+    /* position: relative; */
+    width: 100%;
+    background-color: white;
+    /* border: black 2px solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 1; */
+}
+.brand-logo{
+    height: 50px;
+    
+}
+.icon-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dark-blue{
+    background-color: rgb(39, 56, 122);
+    
+}
+.light-blue{
+    background-color: rgb(151, 201, 220);
+}
+
+.orange-btn{
+    width: 150px;
+    color: white;
+    background-color: rgb(240, 96, 88);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    /* padding: 10px; */
+    height: 40px;
+}
+
+#footer{
+    /* bottom: 0; */
+    padding: 60px 130px 10px;
+    background-color: rgb(39, 56, 122);
+    color: white;
+    z-index: 1;
+}
+#footer-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#activate-btn{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 40px;
+    font-weight: bold;
+    padding: 20px;
+    width: 200px;
+    margin-left: 40px;
+}
+li{
+    list-style: none;
+    text-align: left;
+    font-size: large;
+    margin: 10px 0;
+    
+}
+ul{
+    padding: 0;
+    width: max-content;
+}
+.list-header{
+    font-weight: bold;
+}
+#ul-wrap{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 30px 0;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+.ul-group{
+    /* display: flex; */
+    margin-right: 30px;
+}
+#get-connected-group{
+    display: flex;
+    flex-direction: row;
+}
+.connect-btn{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-quick-action-tab{
+    padding: 20px 130px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#quick-action-tab-words{
+    color: white;
+
+}
+#quick-action-tab-words > p{
+    font-size: 32px;
+}
+
+.quick-action-tab-link{
+   
+    display: inline-block;
+    margin-top: 20px;
+}
+.quick-action-tab-link:active, .quick-action-tab-link:hover{
+    color: white;
+    text-decoration: underline;
+    
+}
+#quick-action-tab-btns{
+    display: flex;
+    align-items: center;
+}
+.quick-action-btns{
+    border: white 1px solid;
+    border-radius: 20px;
+    padding: 10px 40px;
+    width: max-content;
+}
+#knowledge-is-power{
+    padding: 20px;
+    background-color: rgb(248, 244, 238);
+    color: rgb(39, 56, 122);
+    text-align: center;
+}
+
+#knowledge-board{
+    background-color: white;
+    margin: 40px 80px 20px;
+    border-radius: 10px;
+    padding: 40px 120px;
+    
+}
+#knowledge-board >p{
+    font-size: 32px;
+}
+#sticky-section{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+.board-sticky-note{
+    width: 250px;
+    margin: 10px;
+     height: 290px;
+}
+.thumbnail-homepage{
+width: 250px;
+}
+#simple-personal-convenient{
+    text-align: center;
+    background-color: rgb(227, 241, 246);
+    color: rgb(39, 56, 122);
+    padding: 40px 130px;
+}
+#sale-points{
+    margin: 0px 0px 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+
+}
+.sales-img-text-wrap{
+   width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 40px;
+}
+.img-circle{
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ }
+#deserve-the-best{
+    background-color: rgb(39, 56, 122);
+    color: white;
+    text-align: center;
+    padding: 40px 130px;
+    
+}
+#deserve-best-icons-wrap{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.you-deserve-the-best-wraps{
+    width: 300px;
+    margin: 0 50px;
+}
+
+#picture-in-focus{
+    background-color: rgb(248, 244, 238);
+    color: rgb(39, 56, 122);
+    padding: 40px 130px;
+    text-align: center;
+
+}
+.blog-post{
+    width: 100%;
+    height: 200px;
+
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    background-color: white;
+    justify-content: space-between;
+
+
+}
+.blog-img{
+    border-radius: 50px 0 0 50px;
+    /*height: 200px;*/
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+}
+.blog-img-container{
+    position: relative;
+    width: 45%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.blog-text{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 0 20px;
+}
+#picture-unfiltered{
+    color: rgb(39, 56, 122);
+    padding: 40px 130px;
+    text-align: center;
+}
+.mySlides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.focus-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.slideshow-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slideshow-contents{
+    margin: 20px 40px;
+}
+.slide-flexbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: rgb(39, 56, 122);
+}
+#get-social-with-us{
+    color: rgb(39, 56, 122);
+    padding: 40px 130px;
+    text-align: center;
+}

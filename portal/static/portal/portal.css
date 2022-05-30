@@ -1,0 +1,634 @@
+body{
+    margin: 0;
+    background-color: rgba(241, 248, 250, 1);
+    font-family:'museo-sans', sans-serif;
+    
+}
+h1{
+    font-size: larger;
+    color: rgb(40, 40, 40);
+}
+h1 , p{
+    padding: 0px;
+}
+h2{
+    font-size: large;
+    color: rgb(40, 40, 40);
+}
+h3{
+    font-size: medium;
+}
+a {
+    color: rgba(66, 153, 255, 1);
+    text-decoration: none;
+}
+p{
+   margin: 10px 0px;
+   padding: 5px;
+   padding-left: 0;
+   font-size: small;
+   color: rgb(40, 40, 40);
+}
+span{
+    color: rgba(39, 56, 122, 1);
+    font-size: small;
+    
+}
+li{
+    list-style: none;
+    padding: 10px 0px;
+    border-left: 5px solid rgba(184, 219, 233, 1);
+
+}
+ul{
+    padding: 0;
+    width: 100%;
+}
+i{
+    margin: 0 5px;
+}
+
+
+/* .icon-name-dropdown{
+    float: right;
+    overflow: hidden;
+} */
+/*
+#sidebar-container{
+    float: left;
+    height: 100%;
+}*/
+#page-content{
+    display: flex;
+    flex-direction: row;
+}
+#left-side{
+    margin: 0;
+    width: 213px;
+    height: 100%;
+    background-color: rgba(184, 219, 233, 1);
+    position: fixed;
+    z-index: 4;
+    
+}
+#sidebar-container{
+    height: 100%;
+    
+}
+#brand-logo{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#brand-logo img{
+    width: 80px;
+    margin-left: 25px;
+}
+
+.sidebar{
+    cursor: pointer;
+    margin-left: 5px ;
+    
+}
+.sidebar a{
+    color: rgba(39, 56, 122, 1);
+
+}
+.sidebar-list-items{
+    padding-left: 5px;
+}
+.sidebar-list-items:focus{
+    background-color: rgba(223, 239, 245, 1);
+    border-left: 5px solid rgba(39, 56, 122, 1);
+}
+.sidebar-list-items:hover{
+    background-color: rgba(203, 229, 239, 1);
+    border-left: 5px solid rgba(39, 56, 122, 1);
+}
+#sidebar-return-home-link{
+    display: flex;
+    
+}
+#sidebar-contact-info{
+    display: flex;
+
+    
+}
+#home-email{
+    font-size: small;
+}
+#right-side{
+    margin: 0;
+    width: -webkit-fill-available;
+
+
+}
+#top-nav-container{
+    background-color: white;
+    top: 0;
+    width: 100%;
+    box-shadow: 2px 2px 4px 0px rgb(0 0 0 / 25%);
+    height: 60px;
+    display: flex;
+    z-index: 3;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    
+    
+}
+.icon-name-dropdown-btn{
+    height: 60px;
+    background-color: white;
+    outline: none;
+    border: none;
+    display: block;
+}
+.icon-name-dropdown-btn:hover, .icon-name-dropdown-btn:active{
+    background-color: rgba(248, 249, 250, 1);
+}
+.icon-name-dropdown{
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0px 4px;
+    
+}
+.dropdown-content{
+    display: none;
+    border: 1px solid rgb(0 0 0 / 25%);
+}
+.dropdown-content a{
+    color: rgba(40, 40, 40, 1);
+    display: block;
+    padding: 10px 15px;
+    font-size: small;
+    /* margin: 0px 15px; */
+}
+.dropdown-content a:hover{
+    background-color: rgba(248, 249, 250, 1);
+}
+.icon-name-dropdown:hover .dropdown-content {
+    display: block;
+}
+#header-dropdown-content{
+    padding: 10px 25px;
+    background-color: rgba(39, 56, 122, 1);
+    color: white;
+    font-size: small;
+    border: none;
+    margin: 0;
+}
+#header-dropdown-content p{
+    color: white;
+}
+#main-dropdown-content{
+    background-color: white;
+    margin: 0;
+    /* padding: 15px 20px; */
+    padding-bottom: 0px;
+    
+}
+#main-dropdown-content p{
+    padding: 10px 0px;
+    font-size: small;
+    margin: 0px 25px;
+    color: rgba(39, 56, 122, 1);
+}
+#page-content{
+    width:100%;
+    height: 100%;
+}
+.main-page-content{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 234.3px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+#heading{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+#tour-btn{
+    outline: none;
+    background-color: white;
+    border-radius: 20px;
+    height: min-content;
+    max-width: 200px;
+    border: none;
+    padding: 5px 25px;
+    font-size: small;
+    color: rgb(40, 40, 40);
+}
+.heading-h1{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+#card-section-tabs{
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+}
+.tab{
+    height: 40px;
+    width: 120px;
+    background-color: rgba(241, 248, 250, 1);
+    font-size: small;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    align-items: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.active-tab, .tab:hover{
+    background-color: white;
+}
+
+#card-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#purchase-cards{
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    width: 800px;
+    height: min-content;
+}
+#notice-cards{
+    width: 360px;
+    margin-left: 20px;
+    float: right;
+}
+.cards{
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%)
+}
+
+.notice-header{
+    border-bottom: 1px solid rgb(0 0 0 / 25%);
+    
+}
+.notice-header-content{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.right-float{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* //////////////////////////////////////////////////////////////
+//////////////////////////***Tests page CSS***//*////////////////////
+//////////////////////////////////////////////////////////////// */
+
+#test-info-table{
+    display: grid;
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    text-align: center;
+
+}
+#consults-form-box{
+    /* display: grid; */
+    margin-right: 10px;
+    min-height: 250px;
+    width: 65%;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    
+}
+#consults-form{
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    color: rgb(219 223 225 / 1);
+}
+#test-dropdown{
+    width: 100%;
+    height: 30px;
+    border-color: rgb(219 223 225 / 1);
+    outline: none;
+    color: rgb(108 117 125 / 1);
+
+}
+#test-dropdown:focus{
+    outline: none;
+}
+#consults-form > p{
+    color: rgb(108 117 125 / 1);
+}
+#consult-form-continue-btn{
+    border: none;
+    outline: none;
+    width: 120px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(219 223 225 / 1);
+    color:rgb(254 255 255 / 1);
+}
+#history-info-table{
+    display: grid;
+    width: 100%;
+    min-height: 150px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    text-align: center;
+}
+
+#order-history-table{
+    border-collapse: collapse;
+    margin: 15px;
+    margin-top: 25px;
+    height: max-content;
+}
+#order-history-table td, #order-history-table th{
+    border: 2px solid #fff;
+    padding: 8px;
+}
+#order-history-table tr:nth-child(even){
+    background-color: rgb(232, 243, 247);
+}
+#order-history-table tr:hover {
+    background-color: #ddd;
+}
+#order-history-table th {
+    padding: 8px;
+    text-align: left;
+    font-size: small;
+    color: rgb(40, 40, 40);
+    background-color: rgb(240 240 240 / 1);
+}
+#support-group-box{
+    display: flex;
+    flex-direction: row;
+}
+#support-right-side{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+#support-search-input{
+    margin-bottom: 30px;
+    padding: 5px 10px;
+    border: 1px solid rgb(219 223 225 / 1);
+    border-radius: 4px;
+    outline: none;
+}
+#genetic-support-btn{
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    height: min-content;
+    color: rgba(39, 56, 122, 1);
+    font-weight: bold;
+    font-size: small;
+
+}
+#support-item-box{
+    
+    padding: 20px 30px;
+    background-color: white;
+}
+.parent-collapsible{
+    background-color: white;
+    color: rgba(39, 56, 122, 1);
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 0;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.parent-collapsible-content{
+    display: none;
+    overflow: hidden;
+}
+.child-collapsible{
+    background-color: rgba(241, 248, 250, 1);
+    color: rgba(40, 40, 40, 1);;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: small;
+    font-weight: bold;
+    margin-top: 12px;
+}
+.active, .child-collapsible:focus{
+    color: rgba(39, 56, 122, 1);
+    
+
+}
+.child-collapsible:after{
+    content: '\002B'; /* unicode for the + sign */
+    font-size: larger;
+    color: tomato;
+    border: none;
+    outline: none;
+    float: right;
+    margin-right: 10px;
+
+}
+.active:after{
+    content: '\2212'; /* unicode for the - sign */
+    float: right;
+    margin-right: 10px;
+}
+.child-collapsible-content{
+    padding: 0 10px 10px 10px;
+    height: min-content;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(241, 248, 250, 1);
+}
+.child-collapsible-content > p{
+    margin: 0;
+}
+
+#settings-page-group{
+    display: flex;
+    flex-direction: row;
+}
+#settings-menu{
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    
+}
+.settings-menu-btn{
+    background-color:rgba(241, 248, 250, 1);
+    font-size: small;
+    min-width: 150px;
+    padding: 7px 10px;
+    border-radius: 2px;
+    border: none;
+    margin-bottom: 10px;
+    outline: none;
+    text-align: left;
+
+}
+.settings-menu-btn a{
+    color: rgb(40, 40, 40);
+}
+.active-settings-btn, .settings-menu-btn:active{
+    background-color: rgba(39, 56, 122, 1);
+
+}
+.settings-menu-btn:active a{
+    color: white;
+}
+#account-info-form-box{
+    display: grid;
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 25%);
+    padding: 0 20px;
+    
+}
+#account-info-form-box h3{
+    border-bottom: 1px solid rgb(0 0 0 / 25%);
+    padding: 10px 0;
+    font-size: medium;
+}
+#label-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.form-label{
+    font-size: smaller;
+    margin: 15px;
+    margin-right: 100px;
+    width: 100px;
+    display: inline-block;
+    
+}
+
+.setting-form-input{
+    margin-left: 20px;
+    width: 290px;
+    border: 1px solid rgb(0 0 0 / 25%);
+    border-radius: 4px;
+    padding: 5px;
+    color:  rgb(0 0 0 / 75%);
+}
+#form-dets-box{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+.form-button{
+    background-color:rgb(240, 96, 88);
+    font-size: small;
+    width: 100px;
+    padding: 15px 10px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.clear{
+    background-color: transparent;
+    color: rgba(66, 153, 255, 1);
+}
+.form-btn-box{
+    margin: 20px 0;
+    
+}
+#email-check{
+    margin-left: 0;
+}
+#consent-wrap{
+    display: flex;
+    align-items: center;
+}
+
+.warnings{
+    font-size: smaller;
+}
+#change-email-form{
+    width: 100%;
+}
+.change-label{
+    width: 160px;
+    margin-right: 80px;
+    font-size: smaller;
+    display: inline-block;
+}
+.change-input{
+    width: 70%;
+    border: 1px solid rgb(0 0 0 / 25%);
+    background-color: rgb(233, 236, 239);
+    border-radius: 4px;
+    padding: 7px;
+    color:  rgb(0 0 0 / 75%);
+    outline: none;
+}
+#change-email-form-main-box{
+    margin: 25px 0;
+}
+.change-email-input-wrap{
+    margin-bottom: 15px;
+}
+#change-form-btn{
+    border: none;
+    outline: none;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    /* background-color: rgb(219 223 225 / 1); */
+    font-size: smaller;
+    color:rgb(254 255 255 / 1);
+    margin: 20px 0;
+    cursor: pointer;
+}
+.tomato-btn{
+    background-color: rgb(240, 96, 88);
+}
+#password-warnings{
+    margin-left: 245px;
+}
+#password-warnings-table{
+    margin-bottom: 25px;
+}
+#password-warnings-table td{
+    font-size: smaller;
+    padding-right: 150px;
+}

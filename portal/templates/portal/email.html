@@ -1,0 +1,37 @@
+{% extends 'settingsbase.html' %}
+
+
+    {% block settingsbody %}
+
+        <div id="account-info-form-box">
+            <form enctype="multipart/form-data" action="" method="post" id="change-email-form">
+                {% csrf_token %}
+                <h3>Change Email</h3>
+
+                <div id="consent-wrap">
+                    <input type="checkbox" value="I consent" id="email-check"> <label for="email-check" class="warnings">I understand that if change my email, I will be required to verify the new email. </label>
+
+                </div>
+            
+                <div id="change-email-form-main-box">
+                    <div class="change-email-input-wrap">
+                        <label for="name" class="change-label">Enter New Email</label>
+                        <span>                            
+                            <input type="email" class="change-input" id="new-email"  > 
+                        </span>
+                    
+                    </div>
+                    <div class="change-email-input-wrap">
+                        <label for="name" class="change-label">Current Password</label>
+                        <span>                            
+                            <input type="password" class="change-input" id="password" > 
+                        </span>
+                    </div>
+                </div>
+                <input type="submit" name="Change Email" value="Change Email" id="change-form-btn">
+
+            </form>
+        </div>
+
+
+    {% endblock %}

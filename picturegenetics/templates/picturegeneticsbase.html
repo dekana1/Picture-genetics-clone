@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>Picture Genetics | Personal & Family DNA Testing </title>
+<!--        <link rel="shortcut icon" type="image/x-icon" href="https://picturegenetics.com/assets/favicon/favicon_light/favicon.ico">-->
+<!--        <script src="https://kit.fontawesome.com/be19714452.js" crossorigin="anonymous"></script>-->
+            <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'picturegenetics/picturegenetics.css' %}">
+        <!-- <link rel="stylesheet" type="text/css" href="../static/portal/portal.css"> -->
+        <!-- <script src="{% static 'portal/portal.js' %}"></script> -->
+    </head>
+<body>
+    <div id="top-ad-strip">
+        <p>What's next for your health? Discover Picture Wellness: A DNA test for cancer & cardio risk</p>
+    </div>
+
+    <div id="nav-bar-container">
+        <nav>
+            <div id="navbar">
+                <div > 
+                    <a  href="{% url 'picturegenetics:home' %}"><img data-v-e4ce0690="" src="{% static 'portal/picturegenetics logo 2.svg' %}" class="brand-logo"></a>
+                </div>            
+            
+                <div class="float-right-group">
+                    <div class="row">
+                        <div class="translate-dropdown"></div>
+                        <a  href="{% url 'accounts:login' %}"><div id="login-page-btn" class="icon-btn light-blue"><i class="fa-regular fa-user"></i></div></a>
+                        <a  href="{% url 'cart:cart' %}"><div id="cart-page-btn" class="icon-btn light-blue"><i class="fa-solid fa-cart-shopping"></i></div></a>
+                        <div id="menu-btn" class="icon-btn dark-blue"><i class="fa-solid fa-bars"></i></div>
+                        <div >
+                            <a  href="{% url 'picturegenetics:shop' %}"><button class="orange-btn" id="shop-btn">Shop</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="main-page-content">
+        <div>
+            {% block body %}
+
+            {% endblock %}
+        </div>
+    
+        <div id="footer">
+            <div id="footer-header">
+                <div>
+                    <div> 
+                        <a href="{% url 'picturegenetics:home' %}"><img data-v-e4ce0690="" src="{% static 'picturegenetics/picture-white.svg' %}" class="brand-logo"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <p style="font-size: 32px; ">Already have your kit in hand?</p>
+                        <p style="font-size: large;">Great! You can activate it here to get going.</p>
+                    </div>
+                    
+                    <div>
+                        <button id="activate-btn">Activate Picture</button>
+                    </div>
+                </div>
+            </div>
+            <div id="ul-wrap">
+                <div class="ul-group">
+                    <ul>
+                        <li class="list-header">The Big Picture</li>
+                        <li>About Us</li>
+                        <li>The Frame Blog</li>
+                        <li>Genetics 101</li>
+                    </ul>
+                </div>
+                <div class="ul-group">
+                    <ul>
+                        <li class="list-header">The Basics</li>
+                        <li>How it Works</li>
+                        <li>Genes and Conditions</li>
+                    </ul>
+                </div>
+                <div class="ul-group">
+                    <ul>
+                        <li class="list-header">Our Products</li>
+                        <li>Picture Parenting</li>
+                        <li>Picture Wellness</li>
+                        <li>Picture Newborn</li>
+                        <li>Picture PD Aware</li>
+                        <li>Picture PGx</li>
+                        <li>COVID-19 Testing</li>
+                    </ul>
+                </div>
+                <div class="ul-group">
+                    <ul>
+                        <li class="list-header">Support</li>
+                        <li>Contact Us</li>
+                        <li>FAQs</li>
+                    </ul>
+                </div>
+                <div class="ul-group">
+                    
+                        <div style="margin: 16px 0;">
+                            <p>Sign up for our newsletter now to get $30 off your first order and the latest updates in your inbox!</p>
+                            <small>(Not applicable for COVID-19 tests.)</small><br>
+                            
+                            <div>
+                                <input type="email" style="width: 100%; font-size: 14px; margin-top: 20px; height: 15px; padding: 10px; border-radius: 10px;" placeholder="Enter your email">
+                                <img />
+                            </div>
+                        </div>
+                        
+                    
+                </div>
+            </div>
+            <div >
+                
+                <ul>
+                    <li class="list-header">Connect With Us</li>
+                    <div id="get-connected-group">
+                        <div class="connect-btn"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        <div class="connect-btn"><i class="fas fa-facebook"></i></div>
+                        <div class="connect-btn"><i class="far fa-twiiter"></i></div>
+                        <div class="connect-btn"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+                        <div class="connect-btn"><i class="fas fa-pinterest-p"></i></div>
+                        <div class="connect-btn"><i class="fas fa-linkedin"></i></div>
+                    </div>
+                </ul>
+                <div class="translate-dropdown"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

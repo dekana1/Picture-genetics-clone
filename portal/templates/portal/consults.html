@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div class="non-dashboard">
+        <div>
+            <h1 class="heading-h1">My Consults</h1>
+            <p>Schedule a consultation with a professional genetic counselor at no additonal cost.</p>
+        </div>
+
+        <div id="consults-form-box">
+            
+            <form enctype="multipart/form-data" action="" method="post" id="consults-form">
+                {% csrf_token %}
+                <h2>Select a Test</h2>
+                <select id="test-dropdown"  name="test-dropdown" >
+                    <option value="">- Please select a Test -</option>
+                    <option value="Parenting">- Parenting -</option>
+                    <option value="Wellness">- Wellness -</option>
+                    <option value="PDA">- PD Aware -</option>
+                    <option value="PDX">- PDx -</option>
+                    <option value="newborn">- Newborn -</option>
+                    <option value="CVD">- Covid-19 -</option>
+                    
+                
+                </select>
+                <p>Genetic consultations are included with every test. These consultations are provided by an 
+                    independent network of certified counselors. After you schedule an appointment your final report and other 
+                    communications will be delivered by your assigned genetic counselor.
+                </p>
+                <input type="submit" name="Continue" value="Continue" id="consult-form-continue-btn">
+            </form>
+        </div>
+    </div>
+
+
+{% endblock %}

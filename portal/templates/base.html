@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+
+
+        <meta charset="UTF-8">
+        <title>Picture Genetics | Personal & Family DNA Testing</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://picturegenetics.com/assets/favicon/favicon_light/favicon.ico">
+        <script src="https://kit.fontawesome.com/be19714452.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'portal/portal.css' %}">
+        <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="{% static 'portal/portal.js' %}"></script>
+    </head>
+    <body>
+        <div id="page-content">
+            <div id="left-side">
+                <div id="sidebar-container">
+                    <div id="brand-logo">
+                        <a href="{% url 'picturegenetics:home' %}"><img data-v-e4ce0690="" src="{% static 'portal/picturegenetics logo 2.svg' %}" class="logo-img"></a>
+                        
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <div id="sidebar-menu-items">
+                        <ul>
+                            <li class="sidebar-list-items"><i class="fa fa-home" aria-hidden="true"></i><span class="sidebar"><a href="{% url 'portal:portal' %}">Dashboard</a></span></li>
+                            <li class="sidebar-list-items"><i class="fas fa-vials"></i><span class="sidebar"><a href="{% url 'portal:tests' %}">My Tests</a></span></li>
+                            <li class="sidebar-list-items"><i class="far fa-clipboard"></i><span class="sidebar"><a href="{% url 'portal:consults' %}">My Consults</a></span></li>
+                            <li class="sidebar-list-items"><i class="fa fa-calendar" aria-hidden="true"></i><span class="sidebar"><a href="{% url 'portal:history' %}">Order History</a></span></li>
+                            <li class="sidebar-list-items"><i class="fas fa-headset"></i></i><span class="sidebar"><a href="{% url 'portal:support' %}">Support</a></span></li>
+                        </ul>
+                    </div>
+                    <div id="sidebar-return-home-link">
+                        <ul>
+                            <li class="sidebar-list-items">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i><span class="sidebar"><a href="{% url 'picturegenetics:home' %}">Back to Home</a></span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="sidebar-contact-info">
+                        <ul>
+                            <li class="sidebar-list-items">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i><span id="home-email" class="sidebar">hello@picturegenetics.com</span>
+                            </li>
+                            <li class="sidebar-list-items" >
+                                <i class="fa fa-phone" aria-hidden="true"></i><span class="sidebar">(626)-434-3596</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="right-side">
+                <div id="top-nav-container">
+                    
+                    <div class="icon-name-dropdown">
+                        
+                        <button class="icon-name-dropdown-btn">
+                            <i class="fa fa-user"></i>
+                            {{request.user.first_name}}
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        
+                        <div class="dropdown-content">
+                            <div id="header-dropdown-content">
+                                <p style="font-size: medium; padding-bottom: 0;">{{request.user.first_name}}</p>
+                                <p>{{request.user.email}}</p>
+                            </div>
+                            <div id="main-dropdown-content">
+                                <p>Account</p>
+                                <a href="{% url 'portal:settings' %}"><i class="fas fa-cog"></i>Settings</a>
+                                <div style="border-top: 1px solid rgb(0 0 0 / 25%);">
+                                    <a href="{% url 'accounts:logout' %}" ><i class="fas fa-sign-out-alt"></i>Logout</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="main-page-content">
+                    {% block body %}
+
+                    {% endblock %}
+                </div>
+
+
+        </div>
+        </div>
+    </body>
+</html>

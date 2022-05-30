@@ -1,0 +1,246 @@
+{% extends 'picturegeneticsbase.html' %}
+
+{% load static %}
+{% block title %} Picture Genetics | Personal & Family DNA Testing {% endblock %}
+{% block body %}
+
+    <div class="dark-blue" id="home-quick-action-tab">
+        <div id="quick-action-tab-words">
+            <p>Need a COVID-19 test?</p>
+            <small style="font-size: large;">Get an FDA authorized testing kit directly to you.</small><br>
+            <a class="quick-action-tab-link">I have a gift code or kit from my employer/school</a>
+        </div>
+        <div id="quick-action-tab-btns">
+            <button class="quick-action-btns" style="background-color: white; margin-right: 40px;">Order Now</button>
+            <button class="quick-action-btns" style="background-color: transparent; color: #fff;">Activate my kit</button>
+        </div>
+    </div>
+    <div id="knowledge-is-power">
+        <h2>Knowledge is Power</h2>
+        <div id="knowledge-board">
+            <p>Picture tests identify important health markers in your DNA - so you can be 
+                proactive about treatment, medications, and overall wellness.
+            </p>
+            <div id="sticky-section"> 
+                <div class="board-sticky-note">
+
+                    <div class="img-title-wrap">
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/parenting home page.svg' %}"/></a>
+                        <a><h3>Parenting</h3></a>
+
+                        <p>Inform your family planning journey.</p>
+                    </div>
+                </div>
+                <div class="board-sticky-note">
+                    <div class="img-title-wrap">
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/wellness homepage.svg' %}"/></a>
+                        <h3>Wellness</h3>
+                        <p>Stay ahead of your heart health and cancer risk</p>
+                    </div>
+                </div>
+                <div class="board-sticky-note">
+                    <div class="img-title-wrap">
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/pdaware homepage.svg' %}"/></a>
+                        <h3>PD Aware</h3>
+                        <p>Determine your genetic risk for Parkinson's</p>
+                    </div>
+                </div>
+                <div class="board-sticky-note">
+                    <div>
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/pgx hoempage.svg' %}"/></a>
+                        <h3>PGx</h3>
+                        <p>Personalize your medication plan</p>
+                    </div>
+                </div>
+                <div class="board-sticky-note">
+                    <div>
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/newborn homepage.svg' %}"/></a>
+                        <h3>Newborn</h3>
+                        <p>Gain peace of mind for your little one</p>
+                    </div>
+                </div>
+                <div class="board-sticky-note">
+                    <div>
+                        <a><img class="thumbnail-homepage" src="{% static 'picturegenetics/img/covid hoempage.svg' %}"/></a>
+                        <h3>COVID-19</h3>
+                        <p>Test for prescence of COVID-19</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div id="simple-personal-convenient">
+        <h2>Simple, Personal, Convenient</h2>
+        <div id="sale-points">
+            <div class="sales-img-text-wrap">
+               <img src="{% static 'picturegenetics/img/spc-1.png' %}" style="width: 200px; border-radius: 50%; margin: 20px;"/>
+                <p> Pick the test that's right for you & order online</p>
+            </div>
+            <div class="sales-img-text-wrap">
+                <img src="{% static 'picturegenetics/img/spc-2.png' %}" style="width: 200px; border-radius: 50%; margin: 20px;"/>
+                <p>Get your test delivered & complete it from home</p>
+            </div>
+            <br>
+            <div class="sales-img-text-wrap">
+                 <img src="{% static 'picturegenetics/img/spc-3.png' %}" style="width: 200px; border-radius: 50%; margin: 20px;"/>
+                <p>We provide medical-grade, clinician-supported analysis</p>
+            </div>
+            <div class="sales-img-text-wrap">
+                <img src="{% static 'picturegenetics/img/spc-4.png' %}" style="width: 200px; border-radius: 50%; margin: 20px;" />
+                <p>You receive straightforward, actionable results online</p>
+            </div>
+        </div>
+        <div>
+            <button class="orange-btn">Learn more</button>
+        </div>
+    </div>
+    <div id="deserve-the-best">
+        <h2>You deserve the best</h2>
+        <p>(That's us)</p>
+        <div id="deserve-best-icons-wrap">
+            <div class="you-deserve-the-best-wraps">
+                <div><img src="{% static 'picturegenetics/img/50x.png' %}" style="width: 120px; margin: 10px;"/></div>
+                <p>We locate more than 50 times more genetic health markers than other leading at-home tests.*</p>
+                <a>Read more</a>
+            </div>
+            <div class="you-deserve-the-best-wraps">
+                <div><img src="{% static 'picturegenetics/img/desktop-personicon.png' %}" style="width: 120px; margin: 10px;"/></div>
+                <p>Genetic counseling support is at your fingertips & included with every test.</p>
+                <a>Read more</a>
+            </div>
+            <div class="you-deserve-the-best-wraps">
+                <div><img src="{% static 'picturegenetics/img/testubes.png' %}" style="width: 120px; margin: 10px;"/></div>
+                <p>Analysis is performed by experienced scientists at our clinical lab (which also serves doctors at 700+ global institutions).</p>
+                <a>Read more</a>
+            </div>
+        </div>
+    </div>
+    <div id="picture-unfiltered">
+        <h2>Picture Unfiltered</h2>
+        <p>Want to explore Picture outside these four (virtual) walls?
+            Check out our presence on the <b>real</b> world. 
+        </p>
+        <div class="slideshow-container">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <div id="slideshow-contents">
+                <div class="mySlides fade">
+                  <div class="slide-flexbox">
+                      <img src="{% static 'picturegenetics/img/couple.png' %}" style="width:300px; margin-right: 30px;
+                            display: block;">
+                      <div class="focus-wrap" style="display: flex;">
+                      <div class="text">"Not all 'at-home' testing kits are created equal."</div>
+                          <br>
+                          <small style="display: block;">Tiffany Remington </small>
+                          <small style="display: block;">@ustheremingtons via IG</small>
+
+                  </div>
+                  </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="slide-flexbox">
+                        <img src="{% static 'picturegenetics/img/holding-kit.png' %}" style="width:300px; margin-right: 30px;
+                             display: block;">
+                        <div class="focus-wrap">
+                          <div class="text">It’s easy to order and understand with good looking reports!"</div>
+                            <br>
+                            <small>Kira Dineen</small>
+                          <small>via DNA Today Podcast</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="slide-flexbox">
+                      <img src="{% static 'picturegenetics/img/parkinson.png' %}" style="width:300px; margin-right: 30px;
+                                 display: block;">
+                      <div class="focus-wrap">
+                          <div class="text">Collaboration with the Parkinson's Foundation</div>
+                          <br>
+                          <small>Globe Newswire</small>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+    </div>
+    <div id="picture-in-focus">
+        <h2>Picture in Focus</h2>
+        <p>(We have a blog)</p>
+        <div class="blog-post-grid">
+            <div class="blog-post">
+                <div class="blog-img-container">
+                    <a href="#"><img class="blog-img" src="{% static 'picturegenetics/img/girlfriends-talking.png' %}"></a>
+                    <div class="text-block">
+                        <p>3 minute read</p>
+                    </div>
+                </div>
+                <div class="blog-text">
+                    <p>Why Medical Associations Support Carrier Testing for Everyone</p>
+                    <p>What a diaper rash looks like, how glorious it is to eat a meal without interruptions… There’s a lot..</p>
+                </div>
+            </div>
+            <div class="blog-post">
+                <div class="blog-img-container">
+                    <a href="#"><img class="blog-img" src="{% static 'picturegenetics/img/greenlock.png' %}"></a>
+                    <div class="text-block">
+                        <p>5 minute read</p>
+                    </div>
+                </div>
+                <div class="blog-text">
+                    <p>Picture Genetics Privacy Policy: Explained</p>
+                    <p>Privacy is a hot topic, and it should be. As more products and services become available online, and..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="get-social-with-us">
+        <h2>Get social with us!</h2>
+        <P>@picturegenetics</P>
+    </div>
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+    function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+{% endblock %}

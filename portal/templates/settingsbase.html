@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div class="non-dashboard">
+        <div>
+             <h1 class="heading-h1">Settings</h1>
+            <p>View or edit your personal information, or change your password.</p>
+        </div>
+        <div id="settings-page-group">
+            <div id="settings-menu">
+                <button class="settings-menu-btn active-settings-btn"><a href="{% url 'portal:settings' %}">Account</a></button>
+                <button class="settings-menu-btn"><a  href="{% url 'portal:email' %}">Email</a></button>
+                <button class="settings-menu-btn"><a  href="{% url 'portal:password' %}">Password</a></button>
+            </div>
+                {% block settingsbody %}
+
+
+
+
+                {% endblock %}
+
+            
+        </div>
+        <script>
+            // try using while loops
+             var btnContainer = document.getElementById("settings-menu");
+              // Get all buttons with class="btn" inside the container
+              var btns = btnContainer.getElementsByClassName("settings-menu-btn");
+              for (var j = 0; j < btns.length; j++) {
+                btns[j].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active-settings-btn");
+                    current[0].className = current[0].className.replace(" active-settings-btn", "");
+                    this.className += " active-settings-btn";
+                 });
+              }
+        </script>
+    </div>
+
+
+{% endblock %}

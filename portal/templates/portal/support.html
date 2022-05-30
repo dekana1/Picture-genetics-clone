@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div class="non-dashboard">
+        <div>
+            <h1 class="heading-h1">Support</h1>
+            <p>If you have any questions, we are here to help.</p>
+        </div>
+        <div id="support-group-box">
+            <div id="consults-form-box">
+                <div id="support-item-box">
+                    <button type="button" class="parent-collapsible">Genetic Testing 101 <i class="fas fa-angle-down"></i></button>
+                    <div class="parent-collapsible-content">
+                        <button type="button" class="child-collapsible">How does genetic testing work?</button>
+                        <div class="child-collapsible-content">
+                            <p> Your whole body  is made up of individual cells, and each of your cells contains a copy of your DNA.
+                                That includes the cells in your mouth -- by analyzing a sample of your saliva, we can read your uniue genetic code. 
+                                After you send us a sample we'll sequence it in our lab and send you back a comprehensive report about whether you carry the genetic
+                                variations we test for.
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">How does genetic inheritance work?</button>
+                        <div class="child-collapsible-content">
+                            <p>Our genes contain all the informathion we need to function as humans. Generally, we each inherit two copies of each gene:
+                                one form our mom, and one from our dad. Most of the genes look exactky the same from one person to another, no matter how closely related.
+                                The feww genetic variations that do exist from person to person are the ones that determine thi gs like the colour of our eyes, or 
+                                whether we get freckles. Sometimes, the genes that make us different from other people are genes that increase our risk for certain diseases and health
+                                conditions. Such genes are often passed down from parents to children, or, occasionally, they arise spontaneaously. Genetic testing helps identify variations 
+                                in genes that pose a potential health risk for you and your family.
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">Does genetic testing affect my family?</button>
+                        <div class="child-collapsible-content">
+                            <p>Since you inherit your genes from your mom and dad, it is likely that those same genes run in your close family members and other bloood
+                                reletives. Regardless of your results, sharing your information with them can be important to help inform them on their own genetics journey.
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">What is genetic counselling?</button>
+                        <div class="child-collapsible-content">
+                            <p>Genetic counselors are certified professionals trained in the fields of genetics and counselling. A genetic counselor can walk you 
+                                through the process of genetic testing, from discussing which test is right for you, to illuminating the implications of your results for the yourself and your family.
+                                Genetic counselling is included within the cost of every Picture test to spport and empower you on your journey, and we encourage you to take advantage of it! 
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">How can I use my test results to my advantage?</button>
+                        <div class="child-collapsible-content">
+                            <p>Understanding your genetic risks is the first step in taking action to support you and your family's long-term health. All conditions
+                                that Picture tests for are conditions that doctors can hel you prevent, manage or mitigate. Our tests provide clear results that can
+                                be used by you and your healthcare provider to help ensure that your personal or reproductuive health plans are perfectly tailored to you! 
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">How is my privacy ensured?</button>
+                        <div class="child-collapsible-content">
+                            <p>Your DNA is personal - we'll keep it that way. Some Information about you is shared with one third party -- a liscensed, independent
+                                <a>provider group</a> whose doctors review and approve your application. This is required for all clinical-grade tests. Regardless, Picture
+                                will never share your information with any third party without your clear consent. We strive to ensure that the storage of your genetic informationis both physically and digitally
+                                secure, and all of our data analysis is performed on private servers loacted in the US. 
+                            </p>
+                        </div>
+                        <button type="button" class="child-collapsible">Can my employer or health insurance comapany discriminate against me based on my results?</button>
+                        <div class="child-collapsible-content">
+                            <p>No. The Genetic Information Nondiscrimination Act (GINA) was signed into the law in 2008. It protects individuals from discriminationby an employer
+                                or health insurane company based on genetictesting results and genetic information. GINA does not offer protections for disability, long-term care, or life insurance.
+                                It also does not apply to members of the U.S military or employees of the federal government. Indian Health Service, or Veterans Health Adminsitration.
+                                For detailed information about GINA, please visit <a>www.eeoc.gov/laws/types/gentic.cfm.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            </div>
+            <div id="support-right-side">
+                <input id="support-search-input" type="search" placeholder="Search by Keyword">
+                <button id="genetic-support-btn">Genetic Testing 101</button>
+            </div>
+        </div>
+
+        
+    </div>
+    <script>
+        var parent_coll = document.getElementsByClassName("parent-collapsible");
+        var i;
+        for (i = 0; i < parent_coll.length; i++) {
+            parent_coll[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                var parent_content = this.nextElementSibling;
+                if (parent_content.style.display === "block") {
+                    parent_content.style.display = "none";
+                } else{
+                    parent_content.style.display = "block";
+                }
+            });
+        }
+
+        var child_coll = document.getElementsByClassName('child-collapsible');
+        var j;
+        for (j = 0; j < child_coll.length; j++){
+            child_coll[j].addEventListener("click", function(){
+                this.classList.toggle("active");
+                var child_content = this.nextElementSibling;
+                if (child_content.style.display === "block") {
+                    child_content.style.display = 'none';
+ 
+                } else{
+                    child_content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+
+{% endblock %}

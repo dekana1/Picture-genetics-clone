@@ -1,0 +1,124 @@
+h2{
+    color: rgb(39, 56, 122);
+    display: block;
+    border-bottom: 1px solid rgb(39, 56, 122);
+    width: 50%;
+    padding-left: 0;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 30px;
+
+}
+#title-box{
+    padding-top: 20px;
+    width: 90%;
+    border-bottom: 1px solid rgb(39, 56, 122);
+
+}
+#cart-bg{
+    background-color: #f5fcff;
+    padding-left: 130px;
+    height: 100vh;
+}
+#shopping-board{
+    width: 90%;
+    height: 80vh;
+    margin: 20px 0 20px 0;
+}
+#empty-cart-container{
+    height: inherit;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#cart-items{
+    height: inherit;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#cart-table{
+    margin: 20px;
+    width: 100%;
+}
+th{
+    color: rgb(39, 56, 122);
+    font:
+}
+.cart-table-row{
+    text-align: center;
+
+}
+table {
+  width: 100%;
+  border-spacing: 30px 35px;
+}
+.cart-table-img{
+    width: 150px;
+    height: 100px;
+}
+.increment-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height :inherit;
+}
+.increment-btn{
+    background-color: rgb(39, 56, 122);
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+}
+#item-number{
+    height: 17px;
+    border: 1px solid rgb(39, 56, 122);
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+    outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.underline{
+     text-decoration: underline;
+     color: rgb(39, 56, 122);
+    text-decoration-color: rgb(39, 56, 122);
+
+}
+#checkout-summary{
+    display: flex;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    background-color: #FFDEA0;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+.checkout-summary-row{
+    display:flex;
+    flex-direction: row;
+    width: 450px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}

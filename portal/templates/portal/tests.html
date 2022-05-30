@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+    <div class="non-dashboard">
+        <div>
+             <h1 class="heading-h1">My Tests</h1>
+            <p>Check on the details of your Picture tests and keep track of your test status.</p>
+        </div>
+
+        <div id="test-info-table">
+
+            {% for test in user_tests%}
+                    <table id="order-history-table">
+                        <tr>
+                            <th>Purchase Date</th>
+                            <th>Test Name</th>
+
+                        </tr>
+
+                        <tr>
+
+                                <td>{{ test.date_purchased| date:"D d M Y" }} </td>
+                                <td>{{ test.test_info }} </td>
+
+                        </tr>
+                    </table>
+
+            {% empty %}
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <img data-v-7390d332="" src="https://picturegenetics.com/assets/icons/order-cart.svg" class="portal-icon mr-2" width="30px" style="margin-right: 10px;">
+                    <p>Looks like you haven't made any purchases. To explore what Picture has to offer, visit <a href="#">products page</a>.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
