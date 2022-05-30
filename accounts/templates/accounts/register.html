@@ -1,0 +1,71 @@
+{% extends 'accountsbase.html' %}
+
+
+{% block body %}
+
+<div id="login-form-box">
+    <form enctype="multipart/form-data" action="" method="post" id="login-form">
+        {% csrf_token %}
+        <div class="half-form">
+            <div class="login-input-wrap" style="margin-right: 10px;">
+                <label for="first-name-register" class="login-label" >First Name</label>
+                <span  id="first-name-register">
+                    {{form.first_name}}
+                </span>
+
+
+            </div>
+            <div class="login-input-wrap" style="margin-left: 10px;">
+                <label for="last-name-register" class="login-label">Last Name</label>
+                <span  id="last-name-register">
+                    {{form.last_name}}
+                </span>
+
+
+
+            </div>
+        </div>
+        <div class="login-input-wrap">
+            <label for="email-register" class="login-label">Email</label>
+            <span  id="email-register">
+                {{form.email}}
+            </span>
+
+        </div>
+
+        <div class="login-input-wrap">
+            <label for="password-register" class="login-label">Password</label>
+        <span  id="password-register">
+                {{form.password1}}
+        </span>
+
+        </div>
+        <div class="login-input-wrap">
+            <label for="confirm-password-register" class="login-label">Confirm Password</label>
+             <span id="confirm-password-register">
+                {{form.password2}}
+            </span>
+
+
+        </div>
+        <div>
+            <div id="consent-wrap">
+                <input type="checkbox" value="I consent to TS" id="terms-service-check"> <label for="terms-service-check" class="consent-box-label">I agree to the Picture Genetics <a>Terms of Service</a></label>
+
+            </div>
+            <div id="consent-wrap">
+                <input type="checkbox" value="I consent to PP" id="privacy-policy-check"> <label for="privacy-policy-check" class="consent-box-label">I agree to the Picture Genetics <a>Privacy Policy</a></label>
+
+            </div>
+        </div>
+        <div class="login-form-btn-box">
+            <input type="submit" name="Create New Account" class="login-button">
+
+        </div>
+        {{ form.errors }}
+
+        <div class="login-form-btn-box return-btn"><a href="{% url 'accounts:login' %}">Back to Login</a></div>
+    </form>
+    
+</div>
+{% endblock %}

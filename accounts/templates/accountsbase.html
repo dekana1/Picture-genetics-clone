@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create an Account | Picture Genetics</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://picturegenetics.com/assets/favicon/favicon_light/favicon.ico">
+        <!-- reference your installed Font Awesome Free package's files here -->
+        <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+
+        <script src="https://kit.fontawesome.com/be19714452.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'accounts/accounts.css' %}">
+        <!-- <link rel="stylesheet" type="text/css" href="../static/portal/portal.css"> -->
+<!--        <script src="{% static 'portal/portal.js' %}"></script>-->
+    </head>
+    <body>
+        <div class="login-background">
+                <div class="teardrop-bg" style="height: 1041px; border-width: 250px; margin-left: 0px; top: -100px; left: -70px; opacity: 0.5; border-color: white;"></div>
+        </div>
+            <div class="top-nav-container">
+                <a href="{% url 'picturegenetics:home' %}">
+                    <img data-v-e4ce0690="" src="{% static 'accounts/picturegenetics logo 2.svg' %}" class="img-logo-login">
+                </a>
+
+            </div>
+
+            <div class="login-center-container">
+                <div id="dark-blue-left-section">
+                    <div id="logo-welcome-wrap">
+                        <div id="blue-id-badge"><i> </i></div>
+                        <div><h2>Welcome to the Picture Family</h2></div>
+                    </div>
+                </div>
+                <div id="light-blue-right-section">
+        
+                    {% block body %}
+
+                    {% endblock %}
+                </div>
+            </div>
+    </body>
+</html>

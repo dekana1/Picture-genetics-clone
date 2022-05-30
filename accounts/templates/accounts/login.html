@@ -1,0 +1,46 @@
+{% extends 'accountsbase.html' %}
+
+
+{% block body %}
+
+        <div id="login-form-box">
+            <form enctype="multipart/form-data" action="" method="post" id="login-form">
+                {% csrf_token %}
+                <div class="login-input-wrap">
+                    <label for="email-login" class="login-label">Email</label>
+                    <span id="email-login">
+<!--                        <input type="email" class="login-input" > -->
+                        {{login_form.email}}
+                    </span>
+                
+                </div>
+                <div class="login-input-wrap">
+                    <label for="password-login" class="login-label">Password</label>
+                    <span id="password-login">
+<!--                        <input type="password" class="login-input" > -->
+                        {{login_form.password}}
+                    </span>
+                
+                </div>
+                {% if login_form.non_field_errors %}
+                    <P>{{login_form.non_field_errors}}</P>
+                {% endif %}
+                <div class="login-form-btn-box">
+                    <input type="submit" value="Log In" class="login-button">
+                
+                </div>
+            </form>
+            <div id="other-signin-top-badge" class="login-form-btn-box">
+                OR
+            </div>
+            <div id="other-signin">
+                <div id="google-login-box">
+                    <button class="google-signin"><i></i> Continue with Google</button>
+                </div>
+                <div id="create-forget-option-box">
+                    <span class="bottom-small"><a href="{% url 'accounts:register' %}">Create an account</a>   |   <a href="{% url 'accounts:forgot_password' %}">Forgot password?</a></span>
+                </div>
+            </div>
+        </div>
+ 
+{% endblock %}
